@@ -1,0 +1,11 @@
+.status {
+    /* Other styles for status span */
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: red;
+}
