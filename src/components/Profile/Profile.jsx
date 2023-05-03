@@ -6,24 +6,24 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
+        <img src={avatar} alt="User avatar" className="profileAvatar" />
+        <h1 className="name">{username}</h1>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
 
       <ul className="stats">
-        <li>
+        <li className='statsList'>
           <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span className="quantity">{stats.followers.toLocalString()}</span>
         </li>
-        <li>
+        <li className='statsList'>
           <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span className="quantity">{stats.views.toLocalString()}</span>
         </li>
-        <li>
+        <li className='statsList'>
           <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span className="quantity">{stats.likes.toLocalString()}</span>
         </li>
       </ul>
     </div>
