@@ -15,15 +15,15 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       <ul className="stats">
         <li className='statsList'>
           <span className="label">Followers</span>
-          <span className="quantity">{stats.followers.toLocalString()}</span>
+          <span className="quantity">{stats.followers.toLocaleString()}</span>
         </li>
         <li className='statsList'>
           <span className="label">Views</span>
-          <span className="quantity">{stats.views.toLocalString()}</span>
+          <span className="quantity">{stats.views.toLocaleString()}</span>
         </li>
         <li className='statsList'>
           <span className="label">Likes</span>
-          <span className="quantity">{stats.likes.toLocalString()}</span>
+          <span className="quantity">{stats.likes.toLocaleString()}</span>
         </li>
       </ul>
     </div>

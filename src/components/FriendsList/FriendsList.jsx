@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className="item">
+    <li className="friendItem">
       <span className={`status ${isOnline ? 'online' : 'offline'}`}></span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <img className="friendAvatar" src={avatar} alt="User Avatar" width="48" />
+      <p className="friendName">{name}</p>
     </li>
   );
 };
 
 const FriendsList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ul className="friendList">
       {friends.map((friend) => (
         <FriendListItem
           key={friend.id}

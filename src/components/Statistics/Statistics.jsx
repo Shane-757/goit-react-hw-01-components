@@ -16,11 +16,11 @@ const Statistics = ({ title, stats }) => {
     <section className="statistics">
       {title && <h2 className="title">{title}</h2>}
 
-      <ul className="stat-list">
+      <ul className="statList">
         {stats.map((stat, index) => (
           <li
             key={index}
-            className="item"
+            className="statItem"
             style={{ backgroundColor: getRandomColor() }}
           >
             <span className="statsLabel">{stat.label}</span>
