@@ -4,7 +4,7 @@ import './TransactionHistory.css';
 
 const TransactionRow = ({ type, amount, currency }) => {
   return (
-    <tr>
+    <tr className="transactionData">
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
@@ -20,17 +20,17 @@ TransactionRow.propTypes = {
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
-      <thead>
+    <table className="transactionHistory">
+      <thead className="transactionHead">
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="transactionInfo">
         {items.map((transaction) => (
-          <TransactionRow
+          <TransactionRow 
             key={transaction.id}
             type={transaction.type}
             amount={transaction.amount}
